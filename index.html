@@ -39,8 +39,8 @@
               
  
                 <p style="text-align:justify">
-                Fun Fact: I am fluent in 4 languages.
-                </p>
+                <span id="fun-fact">Fun Fact: I am fluent in 4 languages.</span>
+                <button onclick="showFunFact()" style="margin-left:10px;">Show another fun fact</button>
                   
                 <p style="text-align:center">
                   <a href="mailto:alfred.cueva@gatech.edu">Email</a> &nbsp;/&nbsp;
@@ -48,6 +48,7 @@
                   
                   <a href="https://www.linkedin.com/in/alfred-cueva/" target="_blank" rel="noopener noreferrer">Linkedin</a> &nbsp;/&nbsp;
                   <a href="https://github.com/alfred-cueva/" target="_blank" rel="noopener noreferrer">Github</a>
+                  <a href="https://x.com/alfie14x" target="_blank" rel="noopener noreferrer"> &nbsp;/&nbsp; X </a>
                 </p>
               </td>
               <td style="padding:2.5%;width:40%;max-width:40%">
@@ -145,130 +146,156 @@
           </tbody>
           </table>
 
-          <table style="width:100%; border: 0; border-spacing: 0; margin: auto; border-collapse: separate;">
-            <tbody>
-              <tr>
-                <td style="padding:20px;width:25%;vertical-align:middle">
-                  <img src="images/diffusionpolicydemo.gif" alt="Diffusion Policy Demo" width="200" height="160">
-                </td>
-                <td width="75%" valign="middle">
-                <a href="https://github.com/alfred-cueva/lerobot/tree/gatech/reproduce_results" target="_blank" rel="noopener noreferrer">
+          <tr>
+            <table style="width:100%; border: 0; border-spacing: 0; margin: auto; border-collapse: separate;">
+              <tbody>
+                <tr>
+                  <td style="padding:20px;width:25%;vertical-align:middle">
+                    <img src="images/diffusionpolicydemo.gif" alt="Diffusion Policy Demo" width="200" height="160">
+                  </td>
+                  <td width="75%" valign="middle">
+                  <a href="https://github.com/alfred-cueva/lerobot/tree/gatech/reproduce_results" target="_blank" rel="noopener noreferrer">
                   <span class="papertitle">Diffusion Policy for Multi-Step Block Assembly</span>
                 </a>
                 <br>
-                <strong>Alfred Cueva*</strong>, 
-                <a href="https://kr.linkedin.com/in/seok-joon-kim" target="_blank" rel="noopener noreferrer">Seok Joon Kim*</a>, 
-                <a href="https://www.linkedin.com/in/kyle-kam" target="_blank" rel="noopener noreferrer">Kyle Kam*</a>
-                <br>
-                <em>Graduate Course Project (Deep Reinforcement Learning, Fall 2025)</em>
-                <br>
-                <p style="text-align:justify">We implement transformer-based diffusion policies for long-horizon visuomotor manipulation,
-                  focusing on sequential pick-and-place and multi-block assembly.
-                  The system uses ArUco-based 6-DoF state estimation and closed-loop action diffusion,
-                  deployed on a UR10e platform for multi-step task execution.</p>
-              </td>
-            </tr>
+                  <strong>Alfred Cueva*</strong>,
+                  <a href="https://kr.linkedin.com/in/seok-joon-kim" target="_blank" rel="noopener noreferrer">Seok Joon Kim*</a>,
+                  <a href="https://www.linkedin.com/in/kyle-kam" target="_blank" rel="noopener noreferrer">Kyle Kam*</a>
+                  <br>
+                  <em>Graduate Course Project (<a href="https://www.pair.toronto.edu/cs8803-drl-f25/" target="_blank" rel="noopener noreferrer">Deep Reinforcement Learning</a>, Fall 2025)</em>
+                  <br>
+                  <p style="text-align:justify">We implement transformer-based diffusion policies for long-horizon visuomotor manipulation,
+                    focusing on sequential pick-and-place and multi-block assembly.
+                    The system uses ArUco-based 6-DoF state estimation and closed-loop action diffusion,
+                    deployed on a UR10e platform for multi-step task execution.</p>
+                </td>
+              </tr>
 
-            <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <img src="images/cartpole_example.PNG" alt="pgm" width="200" height="160">
-              </td>
-              <td width="75%" valign="middle">
-                <a href="data/Cartpole_Report.pdf" target="_blank" rel="noopener noreferrer">
-                  <span class="papertitle"> Reinforcement Learning Agent for Rapid Task Adaptation </span>
+              <tr>
+                  <td style="padding:20px;width:25%;vertical-align:middle">
+                    <img src="images/turtlebotracing.gif" alt="Turtlebot Demo" width="200" height="160">
+                  </td>
+                  <td width="75%" valign="middle">
+                  <a href="https://github.gatech.edu/clopez67/stark_industries_ws" target="_blank" rel="noopener noreferrer">
+                  <span class="papertitle">Multi-Modal Perception for Autonomous Maze Navigation</span>
                 </a>
                 <br>
-                <strong>Alfred Cueva*</strong>, <a href="https://www.linkedin.com/in/gene-chung-988573303/?originalSubdomain=kr" target="_blank" rel="noopener noreferrer">Gene Chung*</a>,
-                  Taehung Kim*, Sumin Ye*
-                <br>
-                <em>Graduate Course Project (Reinforcement Learning, Spring 2023)</em>
-                <br>
-                <p style="text-align:justify">We combine off-policy reinforcement learning with Seq2Seq networks to perform
-                  online rapid adaptation in unknown environments.</p>
-              </td>
-            </tr>
+                  <strong>Alfred Cueva*</strong>,
+                  <a href="https://de.linkedin.com/in/cgaetal" target="_blank" rel="noopener noreferrer">Carlos Gaeta*</a>
+                  <br>
+                  <em>Graduate Course Project (Introduction to Autonomy, Fall 2025)</em>
+                  <br>
+                  <p style="text-align:justify"> We develop a multi-modal perception and navigation system for autonomous maze solving,
+                  combining real-time sign classification with LIDAR-based wall detection.
+                  The robot interprets directional, stop, and goal signs to execute discrete 90° maneuvers,
+                  demonstrated in a full ROS pipeline for reliable, long-horizon navigation in structured indoor environments.
+                  </p>
+                </td>
+              </tr>
 
-            <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <img src="images/2DBPP_example.PNG" alt="pgm" width="200" height="160">
-              </td>
-              <td width="75%" valign="middle">
-                <a href="https://github.com/alfred-cueva/2D-BPP-RL" target="_blank" rel="noopener noreferrer">
-                  <span class="papertitle"> Constrained 2D Online Bin Packing Problem using Reinforcement Learning</span> 
-                </a>
-                <br>
-                <p style="text-align:justify">
-                  We learn 2D optimal bin packing strategy with Heuristics Integrated Deep Reinforcement Learning as in
-                  <a href="https://ieeexplore.ieee.org/document/10018146" target="_blank" rel="noopener noreferrer" <papertitile> Yang et al.</papertitile>
+              <tr>
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <img src="images/cartpole_example.PNG" alt="pgm" width="200" height="160">
+                </td>
+                <td width="75%" valign="middle">
+                  <a href="data/Cartpole_Report.pdf" target="_blank" rel="noopener noreferrer">
+                    <span class="papertitle"> Reinforcement Learning Agent for Rapid Task Adaptation </span>
                   </a>
-                  , and perform model optimization.
-                </p>
-              </td>
-            </tr>
+                  <br>
+                  <strong>Alfred Cueva*</strong>, <a href="https://www.linkedin.com/in/gene-chung-988573303/?originalSubdomain=kr" target="_blank" rel="noopener noreferrer">Gene Chung*</a>,
+                    Taehung Kim*, Sumin Ye*
+                  <br>
+                  <em>Graduate Course Project (Reinforcement Learning, Spring 2023)</em>
+                  <br>
+                  <p style="text-align:justify">We combine off-policy reinforcement learning with Seq2Seq networks to perform
+                    online rapid adaptation in unknown environments.</p>
+                </td>
+              </tr>
 
-            <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <img src="images/humanoid_example.png" alt="pgm" width="200" height="160">
-              </td>
-              <td width="75%" valign="middle">
-                <a href="https://github.com/alfred-cueva/Theory-and-Practice-of-Humanoid-Walking-Control" target="_blank" rel="noopener noreferrer">
-                  <span class="papertitle"> Control Techniques for Humanoid Robots </span>
-                </a>
-                <br>
-                <strong>Alfred Cueva</strong>
-                <br>
-                <em>Graduate Course Project (Theory and Practice of Humanoid Walking Control, Fall 2022)</em>
-                <br>
-                <p style="text-align:justify">We implement various control algorithms from scratch on Tocabi Robot.</p>
-              </td>
-            </tr>
-            <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <img src="images/RCcar_example.png" alt="pgm" width="200" height="160">
-              </td>
-              <td width="75%" valign="middle">
-                <a href="https://github.com/alfred-cueva/RL-Race-Car/tree/main" target="_blank" rel="noopener noreferrer">
-                  <span class="papertitle"> RC Car Autonomous Driving  </span>
-                </a>
-                <br>
-                <strong>Alfred Cueva*</strong>, <a href="https://mx.linkedin.com/in/maxacostamtz" target="_blank" rel="noopener noreferrer">Max Acosta*</a>
-                <br>
-                <em>Graduate Course Project (<a href="https://rllab.snu.ac.kr/courses/intelligent-systems_2023" target="_blank" rel="noopener noreferrer">Introduction to Intelligent Systems</a>, Spring 2023)</em>
-                <br>
-                <p style="text-align:justify">Deployed path tracking and planning algorithms for autonomous RC cars in environments with various difficulties.</p>
-              </td>
-            </tr>
-            <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <img src="images/Soil_demo.gif" alt="critical" width="200" height="160">
-              </td>
-              <td width="75%" valign="middle">
-                <a href="https://github.com/alfred-cueva/ML_based_soil_remote_sensing" target="_blank" rel="noopener noreferrer">
-                  <span class="papertitle"> Soil Sensing with Machine Learning and Satellite Imagery </span>
-                </a>
-                <br>
-                <strong>Alfred Cueva*</strong>, <a href="https://www.linkedin.com/in/dykm" target="_blank" rel="noopener noreferrer">Andy Kim*</a>
-                <br>
-                <em>Graduate Course Project (<a href="https://viplab.snu.ac.kr/viplab/courses/mldl1_2023_2/index.html" target="_blank" rel="noopener noreferrer">Deep Learning</a>, Fall 2023)</em>
-                <p style="text-align:justify">We leverage machine learning regression models to estimate soil health at scale from satellite imagery, supporting data-driven, pro-soil policy enforcement.</p>
-              </td>
-            </tr>            
+              <tr>
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <img src="images/2DBPP_example.PNG" alt="pgm" width="200" height="160">
+                </td>
+                <td width="75%" valign="middle">
+                  <a href="https://github.com/alfred-cueva/2D-BPP-RL" target="_blank" rel="noopener noreferrer">
+                    <span class="papertitle"> Constrained 2D Online Bin Packing Problem using Reinforcement Learning</span>
+                  </a>
+                  <br>
+                  <p style="text-align:justify">
+                    We learn 2D optimal bin packing strategy with Heuristics Integrated Deep Reinforcement Learning as in
+                    <a href="https://ieeexplore.ieee.org/document/10018146" target="_blank" rel="noopener noreferrer" <papertitile> Yang et al.</papertitile>
+                    </a>
+                    , and perform model optimization.
+                  </p>
+                </td>
+              </tr>
 
-            <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <img src="images/SpiritNet_example.png" alt="pgm" width="200" height="160">
-              </td>
-              <td width="75%" valign="middle">
-                <a href="data/SpiritNet_Report.pdf" target="_blank" rel="noopener noreferrer">
-                  <span class="papertitle"> Video Generation from Single-Image Input </span>
-                </a>
-                <br>
-                <strong>Alfred Cueva</strong>
-                <p style="text-align:justify">We propose a novel video-generation algorithm that generates a video from just one image by using sequential structure, without exhibiting any awkward flow problem.</p>
-              </td>
-            </tr>  
-            </tbody>
-          </table>
+              <tr>
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <img src="images/humanoid_example.png" alt="pgm" width="200" height="160">
+                </td>
+                <td width="75%" valign="middle">
+                  <a href="https://github.com/alfred-cueva/Theory-and-Practice-of-Humanoid-Walking-Control" target="_blank" rel="noopener noreferrer">
+                    <span class="papertitle"> Control Techniques for Humanoid Robots </span>
+                  </a>
+                  <br>
+                  <strong>Alfred Cueva</strong>
+                  <br>
+                  <em>Graduate Course Project (Theory and Practice of Humanoid Walking Control, Fall 2022)</em>
+                  <br>
+                  <p style="text-align:justify">We implement various control algorithms from scratch on Tocabi Robot.</p>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <img src="images/RCcar_example.png" alt="pgm" width="200" height="160">
+                </td>
+                <td width="75%" valign="middle">
+                  <a href="https://github.com/alfred-cueva/RL-Race-Car/tree/main" target="_blank" rel="noopener noreferrer">
+                    <span class="papertitle"> RC Car Autonomous Driving  </span>
+                  </a>
+                  <br>
+                  <strong>Alfred Cueva*</strong>, <a href="https://mx.linkedin.com/in/maxacostamtz" target="_blank" rel="noopener noreferrer">Max Acosta*</a>
+                  <br>
+                  <em>Graduate Course Project (<a href="https://rllab.snu.ac.kr/courses/intelligent-systems_2023" target="_blank" rel="noopener noreferrer">Introduction to Intelligent Systems</a>, Spring 2023)</em>
+                  <br>
+                  <p style="text-align:justify">Deployed path tracking and planning algorithms for autonomous RC cars in environments with various difficulties.</p>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <img src="images/Soil_demo.gif" alt="critical" width="200" height="160">
+                </td>
+                <td width="75%" valign="middle">
+                  <a href="https://github.com/alfred-cueva/ML_based_soil_remote_sensing" target="_blank" rel="noopener noreferrer">
+                    <span class="papertitle"> Soil Sensing with Machine Learning and Satellite Imagery </span>
+                  </a>
+                  <br>
+                  <strong>Alfred Cueva*</strong>, <a href="https://www.linkedin.com/in/dykm" target="_blank" rel="noopener noreferrer">Andy Kim*</a>
+                  <br>
+                  <em>Graduate Course Project (<a href="https://viplab.snu.ac.kr/viplab/courses/mldl1_2023_2/index.html" target="_blank" rel="noopener noreferrer">Deep Learning</a>, Fall 2023)</em>
+                  <p style="text-align:justify">We leverage machine learning regression models to estimate soil health at scale from satellite imagery, supporting data-driven, pro-soil policy enforcement.</p>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <img src="images/SpiritNet_example.png" alt="pgm" width="200" height="160">
+                </td>
+                <td width="75%" valign="middle">
+                  <a href="data/SpiritNet_Report.pdf" target="_blank" rel="noopener noreferrer">
+                    <span class="papertitle"> Video Generation from Single-Image Input </span>
+                  </a>
+                  <br>
+                  <strong>Alfred Cueva</strong>
+                  <p style="text-align:justify">We propose a novel video-generation algorithm that generates a video from just one image by using sequential structure, without exhibiting any awkward flow problem.</p>
+                </td>
+              </tr>
+
+              </tbody>
+            </table>
         
 
             <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
@@ -287,6 +314,27 @@
           </td>
         </tr>
       </table>
+    <script>
+      const funFacts = [
+        "Fluent in four languages.",
+        "Lived in five different countries.",
+        "Opening bottles with paper is easier than you think.",
+        "New York cheesecake is a guilt-free pleasure.",
+        "Camped in the Sahara Desert for a night.",
+        "Caught a stunning Bangkok sunset from Mahanakhon, Bangkok’s tallest building, while listening to Coldplay.",
+        "Solo-traveled through Southeast Asia for a month.",
+        "Trained every other day for a month to run a half marathon.",
+        "Spent part of my childhood in the Amazon rainforest.",
+        "Jazz bars are my favorite places to unwind."
+      ];
+
+      function showFunFact() {
+        let current = document.getElementById('fun-fact').textContent.replace('Fun Fact: ', '');
+        let facts = funFacts.filter(f => f !== current);
+        const fact = facts[Math.floor(Math.random() * facts.length)];
+        document.getElementById('fun-fact').textContent = 'Fun Fact: ' + fact;
+      }
+    </script>
     </body>
     
     </html>
