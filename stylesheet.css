@@ -133,3 +133,18 @@ h2 {
 span.highlight {
   background-color: #ffffd0;
 }
+
+/* Company/Institution logos in Experience section */
+.company-logo {
+  width: 100%;
+  max-width: 130px;
+  height: auto;
+  max-height: 75px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
