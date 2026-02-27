@@ -84,7 +84,7 @@
                   <br>
                   <em>Aug 2024 - Present</em>
                   <p style="text-align:justify">
-                    Developed hierarchical control framework combining diffusion policies with RL fine-tuning to address distribution shift in contact-rich humanoid tasks, achieving 85% success rate on door opening, object transport (up to 5kg), and dynamic climbing on Booster platform (<strong>Submitted to RA-L/IROS</strong>).
+                    Developed hierarchical control framework jointly optimizing a diffusion policy planner and RL-based low-level controller to address distributional mismatch in contact-rich humanoid tasks, achieving over 90% success rate on door traversal, object transport, and dynamic climbing on Booster platform (<strong>Submitted to RA-L/IROS</strong>).
                     <br><br>
                     Built Dockerized cloud infrastructure and custom Isaac Lab environments for 31-DOF humanoid training, enabling 2x faster iteration cycles and reproducible training across distributed compute clusters.
                     <br><br>
@@ -205,15 +205,15 @@
                   <img src="images/DPRL.gif" alt="critical" width="200" height="160">
                 </td>
                 <td width="75%" valign="middle">
-                  <a href="" target="_blank" rel="noopener noreferrer">
-                    <span class="papertitle"> Humanoid Loco-manipulation via Joint Optimization of Diffusion Policy and Reinforcement Learning</span>
+                  <a href="https://refine-dp.github.io/REFINE-DP/" target="_blank" rel="noopener noreferrer">
+                    <span class="papertitle"> REFINE-DP: Diffusion Policy Fine-tuning for Humanoid Loco-manipulation via Reinforcement Learning</span>
                   </a>
                   <br>
                   <!-- Zhaoyuan Gu*, Yipu Chen*, Zimeng Chai, Alfred Cueva, Ye Zhao  -->
                   <strong>Under Review for RA-L</strong>
                   <br>
                   <p style="text-align:justify">
-                    Developed joint optimization framework combining diffusion policies with reinforcement learning for humanoid loco-manipulation. The approach fine-tunes offline diffusion policies with online RL interaction, adapting to new scenarios beyond training data. Achieved 85% success rate on door opening, box transport (up to 5kg), and table climbing tasks on Booster humanoid platform. System demonstrates robust whole-body coordination in contact-rich scenarios beyond training distribution.
+                    Proposed a hierarchical framework that jointly optimizes a diffusion policy (DP) high-level planner and an RL-based low-level loco-manipulation controller to address distribution shift in offline-trained humanoid systems. The DP is fine-tuned via a PPO-based diffusion policy gradient to improve task success, while the controller is simultaneously updated to track the planner's evolving command distribution, reducing distributional mismatch that degrades motion quality. Validated on long-horizon loco-manipulation tasks including door traversal and object transport, achieving over 90% success rate in simulation even in extreme out-of-distribution scenarios, with smooth autonomous execution in real-world dynamic environments.
                   </p>
                   <p style="color:#666;font-size:12px;margin-top:8px;"><em>PyTorch · MuJoCo · IsaacGym · Diffusion Models · PPO · Whole-Body Control · Sim-to-Real</em></p>
                 </td>
