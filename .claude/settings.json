@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sed -i 's/<td width=\"\"75%\"\" valign=\"\"middle\"\">/<td style=\"\"padding:20px;width:75%;vertical-align:middle\"\">/g' /home/alfred/Documents/alfred-cueva.github.io/index.html)",
+      "Bash(sed -i 's/<td style=\"\"width: 75%; vertical-align: middle;\"\">/<td style=\"\"padding:20px;width:75%;vertical-align:middle\"\">/g' /home/alfred/Documents/alfred-cueva.github.io/index.html)"
+    ]
+  }
+}
