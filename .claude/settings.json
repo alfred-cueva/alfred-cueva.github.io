@@ -2,7 +2,11 @@
   "permissions": {
     "allow": [
       "Bash(sed -i 's/<td width=\"\"75%\"\" valign=\"\"middle\"\">/<td style=\"\"padding:20px;width:75%;vertical-align:middle\"\">/g' /home/alfred/Documents/alfred-cueva.github.io/index.html)",
-      "Bash(sed -i 's/<td style=\"\"width: 75%; vertical-align: middle;\"\">/<td style=\"\"padding:20px;width:75%;vertical-align:middle\"\">/g' /home/alfred/Documents/alfred-cueva.github.io/index.html)"
+      "Bash(sed -i 's/<td style=\"\"width: 75%; vertical-align: middle;\"\">/<td style=\"\"padding:20px;width:75%;vertical-align:middle\"\">/g' /home/alfred/Documents/alfred-cueva.github.io/index.html)",
+      "Bash(identify /home/alfred/Documents/website/images/huma2any.gif /home/alfred/Documents/website/images/ego_knife.gif /home/alfred/Documents/website/images/refinedp.gif)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8742/)",
+      "Bash(~/miniconda3/bin/python3 -m playwright --version)",
+      "Bash(~/miniconda3/bin/python3 -m playwright install chromium)"
     ]
   }
 }
