@@ -96,6 +96,12 @@ h2 {
   font-size: 24px;
 }
 
+.emoji {
+  font-size: inherit;
+  line-height: 1;
+  vertical-align: middle;
+}
+
 .papertitle {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 16px;
