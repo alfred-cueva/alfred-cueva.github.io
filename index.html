@@ -197,7 +197,7 @@
                   <p style="text-align:justify">
                     A framework for learning reusable object-centric interaction priors from human videos without any real teleoperation data. Human2Any represents manipulation as object--object interaction motion, then composes these priors with robot-side feasibility reasoning and motion planning at deployment, so the same human-derived knowledge transfers across embodiments, scene geometries, and tasks. Validated in hardware experiments on a Franka tabletop and an RBY-1 humanoid mobile robot.
                   </p>
-                  <p style="color:#666;font-size:12px;margin-top:8px;"><em>Human Video · Object-Centric Priors · Task and Motion Planning · Cross-Embodiment Transfer</em></p>
+                  <p style="color:#666;font-size:12px;margin-top:8px;"><em>PyTorch · Learning from Human Video · Object-Centric Priors · Task and Motion Planning · Cross-Embodiment Transfer · Real-Robot Evaluation</em></p>
                 </td>
               </tr>
 
@@ -226,7 +226,7 @@
                   <p style="text-align:justify">
                     A scalable pipeline that converts egocentric human videos into robot-executable demonstrations through two parallel branches: an action branch that retargets human motion with reinforcement learning refinement, and a visual branch that performs arm-hand inpainting with robot rendering blending. Together these minimize the embodiment gap and yield high-fidelity dexterous manipulation data for policy training.
                   </p>
-                  <p style="color:#666;font-size:12px;margin-top:8px;"><em>PyTorch · Egocentric Video · Dexterous Manipulation · Retargeting · Reinforcement Learning · Visual Inpainting</em></p>
+                  <p style="color:#666;font-size:12px;margin-top:8px;"><em>PyTorch · Egocentric Video · Motion Retargeting · Reinforcement Learning · Video Inpainting · Demonstration Data Generation</em></p>
                 </td>
               </tr>
 
@@ -248,7 +248,7 @@
                   <p style="text-align:justify">
                     A hierarchical framework joint optimizing a diffusion policy (DP) high-level planner and an RL-based low-level loco-manipulation controller to mitigate distribution shift in offline-trained humanoid systems. The DP is fine tuned via PPO-based policy gradients while the controller adapts to the planner's evolving commands. Achieves &gt;90% success on door traversal and object transport tasks, including extreme out-of-distribution scenarios with smooth real world execution.
                   </p>
-                  <p style="color:#666;font-size:12px;margin-top:8px;"><em>PyTorch · MuJoCo · IsaacGym · Diffusion Models · Reinforcement Learning · Whole-Body Control · Sim-to-Real</em></p>
+                  <p style="color:#666;font-size:12px;margin-top:8px;"><em>PyTorch · MuJoCo · Isaac Gym · Diffusion Policy · PPO · Whole-Body Control · Sim-to-Real</em></p>
                 </td>
               </tr>
 
@@ -270,7 +270,7 @@
                   <p style="text-align:justify">
                     A wearable whole-body tactile interface, worn by human demonstrators or mounted on humanoids, that captures calibrated tactile images, contact forces, and end-effector poses for contact-rich manipulation of bulky, deformable, and shared-load objects. A force-supervised planner predicts pose and contact-force trajectories via a cross-attention force head, correcting poses into contact-aware targets and driving a tactile-based admittance controller. Across five contact-rich tasks, WT-UMI improves success rate and reduces contact-position tracking error over four policy baselines.
                   </p>
-                  <p style="color:#666;font-size:12px;margin-top:8px;"><em>PyTorch · Diffusion Policy · Tactile Sensing · Whole-Body Control · Sim-to-Real</em></p>
+                  <p style="color:#666;font-size:12px;margin-top:8px;"><em>PyTorch · Diffusion Policy · Tactile Sensing · Force-Supervised Learning · Admittance Control · Wearable Data Collection</em></p>
                 </td>
               </tr>
 
@@ -294,6 +294,7 @@
                   <p style="text-align:justify">
                     A counterfactual action augmentation for moving object manipulation. SIDO displaces the object to a predicted future pose and morphs the demonstrated action chunk to preserve hand-object relative pose, enabling any visuomotor policy trained on static demonstrations to generalize to unseen object motion at test time. It is policy agnostic and compatible with any off-the-shelf motion predictor.
                   </p>
+                  <p style="color:#666;font-size:12px;margin-top:8px;"><em>PyTorch · Data Augmentation · Imitation Learning · Visuomotor Policies · Goal-Conditioned Policies · Object Pose Prediction</em></p>
                 </td>
               </tr>
 
@@ -309,7 +310,7 @@
                   <p style="text-align:justify">
                     Vision-language models (VLMs) are used to perform principled frame selection from demonstration videos and extract physics-grounded reward signals for RL training. By grounding reward computation in physically meaningful video frames, robots can learn complex behaviors from raw video without manual reward engineering.
                   </p>
-                  <p style="color:#666;font-size:12px;margin-top:8px;"><em>PyTorch · VLMs · Reinforcement Learning · Reward Shaping · Video Understanding</em></p>
+                  <p style="color:#666;font-size:12px;margin-top:8px;"><em>PyTorch · Vision-Language Models · Reward Modeling · Reinforcement Learning · Learning from Video</em></p>
                 </td>
               </tr>
 
@@ -327,7 +328,7 @@
                   <p style="text-align:justify">
                     Led development of autonomous drilling robot for construction sites, deploying rule-based computer vision and motion planning for precise surface drilling with ±2mm accuracy. System handles 20kg payloads and operates in GPS-denied cluttered environments, reducing human exposure to hazardous tasks by 80%. Deployed across 5+ Samsung Factory sites.
                   </p>
-                  <p style="color:#666;font-size:12px;margin-top:8px;"><em>ROS2 · OpenCV · Motion Planning · Force Control</em></p>
+                  <p style="color:#666;font-size:12px;margin-top:8px;"><em>ROS2 · OpenCV · Motion Planning · Force Control · Manipulator Control · Field Deployment</em></p>
                 </td>
               </tr>
 
@@ -344,7 +345,7 @@
                   <p style="text-align:justify">
                     Led development and deployment of adaptive AMR fleet (300+ robots) for material transport in construction sites. Implemented safety-aware navigation achieving 92% successful delivery rate in dynamic, GPS-denied environments. System handles 200kg payloads with real-time obstacle avoidance and multi-robot coordination.
                   </p>
-                  <p style="color:#666;font-size:12px;margin-top:8px;"><em>ROS2 · LiDAR SLAM · Nav2 · Fleet Management · Motion Planning</em></p>
+                  <p style="color:#666;font-size:12px;margin-top:8px;"><em>ROS2 · Nav2 · LiDAR SLAM · Motion Planning · Multi-Robot Coordination · Fleet Deployment</em></p>
                 </td>
               </tr>
 
@@ -364,7 +365,7 @@
                   <p style="text-align:justify">
                     Developed meta-RL optimization framework combining model-free learning with physics-based actuator models for bipedal locomotion. Achieved 40% energy reduction in simulated bipedal walking while optimizing parallel elastic actuator stiffness parameters. Framework demonstrated successful sim-to-real transfer potential for weak actuation scenarios.
                   </p>
-                  <p style="color:#666;font-size:12px;margin-top:8px;"><em>MuJoCo · PyTorch · MAML · Model-Based RL</em></p>
+                  <p style="color:#666;font-size:12px;margin-top:8px;"><em>MuJoCo · PyTorch · Meta-RL (MAML) · Hardware-Policy Co-Design · Bipedal Locomotion</em></p>
                 </td>
               </tr>
             </tbody>
@@ -400,7 +401,7 @@
                     <br><br>
                     Engineered a real-time inference server for on-robot policy deployment, enabling low-latency action streaming from large neural network policies over RTC for seamless hardware-in-the-loop evaluation.
                   </p>
-                  <p style="color:#666;font-size:12px;margin-top:8px;"><em>PyTorch · Isaac Sim/Lab · USD · Docker · VR Systems · MuJoCo · Diffusion Models · PPO/SAC</em></p>
+                  <p style="color:#666;font-size:12px;margin-top:8px;"><em>PyTorch · Isaac Sim/Lab · Docker · Distributed Training · Real-Time Inference Serving · VR Teleoperation · Diffusion Policy · PPO/SAC</em></p>
                 </td>
               </tr>
             </tbody>
@@ -450,7 +451,7 @@
                     <br><br>
                     Built <a href="https://www.secc.co.kr/en/library/tech/smart" target="_blank" rel="noopener noreferrer">Isaac Sim digital twin workflows</a> with domain randomization for synthetic data generation, reducing data collection costs by 40% while improving model generalization through cross-team sim-to-real validation.
                   </p>
-                  <p style="color:#666;font-size:12px;margin-top:8px;"><em>PyTorch · ROS2 · Isaac Sim · YOLOv8 · SLAM · Embedded ML · CI/CD</em></p>
+                  <p style="color:#666;font-size:12px;margin-top:8px;"><em>PyTorch · ROS2 · Isaac Sim · YOLOv8 · Visual SLAM · Edge Deployment · Domain Randomization · MLOps</em></p>
                 </td>
               </tr>
 
@@ -471,7 +472,7 @@
                     <br><br>
                     Engineered sensor-fusion collision avoidance system for AGVs combining IMU, LiDAR, and camera data, reducing collision incidents by 80% and enabling safe operation at 1.5m/s in dynamic factory environments.
                   </p>
-                  <p style="color:#666;font-size:12px;margin-top:8px;"><em>PyTorch · SAM · OpenCV · GPU Optimization · Sensor Fusion · Real-Time Systems</em></p>
+                  <p style="color:#666;font-size:12px;margin-top:8px;"><em>PyTorch · TensorRT · SAM · Model Quantization · Edge Inference Optimization · Sensor Fusion · Anomaly Detection</em></p>
                 </td>
               </tr>
 <!-- 
@@ -488,7 +489,7 @@
                   <p style="text-align:justify">
                     Proposed novel model-free RL sim-to-real framework for energy-efficient bipedal locomotion with weak actuators, combining meta-RL optimization with physics-based actuator models to achieve 19% speed improvement and 22% energy cost reduction.
                   </p>
-                  <p style="color:#666;font-size:12px;margin-top:8px;"><em>MuJoCo · PyTorch · MAML · Model-Based RL</em></p>
+                  <p style="color:#666;font-size:12px;margin-top:8px;"><em>MuJoCo · PyTorch · Meta-RL (MAML) · Sim-to-Real · Bipedal Locomotion</em></p>
                 </td>
               </tr>
 
@@ -507,7 +508,7 @@
                     <br><br>
                     Designed sensor-fusion algorithms with filtering and calibration for stable control signals, collaborating cross-functionally on Software-in-the-Loop validation to reduce control latency by 40% (50ms to 30ms) and improve measurement stability by 25%.
                   </p>
-                  <p style="color:#666;font-size:12px;margin-top:8px;"><em>Python · C++ · Sensor Fusion · Capacitive Sensing · Real-Time Control</em></p>
+                  <p style="color:#666;font-size:12px;margin-top:8px;"><em>Python · C++ · Capacitive Tactile Sensing · Sensor Calibration · Real-Time Control · Software-in-the-Loop</em></p>
                 </td>
               </tr>
             </tbody>
@@ -542,7 +543,7 @@
                   <br>
                   <em>Graduate Course Project (<a href="https://www.pair.toronto.edu/cs8803-drl-f25/" target="_blank" rel="noopener noreferrer">Deep Reinforcement Learning</a>, Fall 2025)</em>
                   <p style="text-align:justify">Implemented transformer-based diffusion policies for long-horizon visuomotor manipulation, focusing on sequential pick-and-place and multi-block assembly. Integrated camera-calibrated ArUco-based 6DoF pose estimation with action diffusion for closed-loop execution on UR10e robot. Achieved 85% success rate on 3-block assembly tasks with 200+ teleoperated expert demonstrations.</p>
-                  <p style="color:#666;font-size:12px;margin-top:8px;"><em>PyTorch · LeRobot · ROS · OpenCV · ArUco Markers · UR10e</em></p>
+                  <p style="color:#666;font-size:12px;margin-top:8px;"><em>PyTorch · LeRobot · ROS · Diffusion Policy · 6-DoF Pose Estimation · Teleoperation · UR10e</em></p>
               </td>
             </tr>
 
@@ -560,7 +561,7 @@
                   <br>
                   <em>Graduate Course Project (Introduction to Autonomy, Fall 2025)</em>
                   <p style="text-align:justify">Designed end-to-end ROS2 autonomous navigation stack integrating LiDAR-based Bug0 obstacle avoidance with vision-based traffic sign recognition using KNN classifier. Deployed on TurtleBot3 platform for autonomous maze navigation with real-time sign detection and adaptive waypoint generation. Achieved 95% sign recognition accuracy across 10+ maze configurations.</p>
-                  <p style="color:#666;font-size:12px;margin-top:8px;"><em>ROS · Python · OpenCV · TensorFlow · LiDAR · TurtleBot3</em></p>
+                  <p style="color:#666;font-size:12px;margin-top:8px;"><em>ROS2 · Python · OpenCV · LiDAR · Image Classification · Reactive Navigation · TurtleBot3</em></p>
               </td>
             </tr>
 
@@ -578,7 +579,7 @@
                   <br>
                   <em>Graduate Course Project (Reinforcement Learning, Spring 2023)</em>
                   <p style="text-align:justify">Developed Task-Invariant Agent (TIA) network for multi-task RL, enabling rapid adaptation to new tasks using model dynamics. The architecture integrates a modified DQN policy network, an encoder for latent task representation from experience sequences, and a model predictor for system dynamics. Achieved 3x faster adaptation to new reward functions compared to baseline DQN, demonstrating robust generalization across CartPole task variants.</p>
-                  <p style="color:#666;font-size:12px;margin-top:8px;"><em>PyTorch · OpenAI Gym · DQN · Meta-Learning</em></p>
+                  <p style="color:#666;font-size:12px;margin-top:8px;"><em>PyTorch · OpenAI Gym · DQN · Meta-RL · Multi-Task RL · Model-Based RL</em></p>
               </td>
             </tr>
 
@@ -596,7 +597,7 @@
                   <br>
                   <em>Graduate Course Project (Combinatorial Optimization, Spring 2023)</em>
                   <p style="text-align:justify">Implemented Heuristics Integrated Deep RL approach for online 2D bin packing with placement constraints. Trained PPO agent to learn optimal packing strategies that outperform traditional heuristics. Achieved 15% improvement in space utilization over baseline greedy algorithms.</p>
-                  <p style="color:#666;font-size:12px;margin-top:8px;"><em>PyTorch · PPO · OpenAI Gym · Combinatorial Optimization</em></p>
+                  <p style="color:#666;font-size:12px;margin-top:8px;"><em>PyTorch · PPO · OpenAI Gym · Combinatorial Optimization · Online Decision-Making</em></p>
               </td>
             </tr>
 
@@ -613,7 +614,7 @@
                   <br>
                   <em>Graduate Course Project (Theory and Practice of Humanoid Walking Control, Fall 2022)</em>
                   <p style="text-align:justify">Implemented 10+ humanoid control algorithms including ZMP-based walking pattern generation, Linear Inverted Pendulum Model, preview control, and whole-body operational space control. Developed CoM estimation using complementary filters and capture point-based stabilization for dynamic walking on simulated bipedal robots.</p>
-                  <p style="color:#666;font-size:12px;margin-top:8px;"><em>C++ · MATLAB · Whole-Body Control · QP Solvers · Trajectory Optimization</em></p>
+                  <p style="color:#666;font-size:12px;margin-top:8px;"><em>C++ · MATLAB · Whole-Body Control · Operational Space Control · ZMP &amp; Capture Point · Bipedal Walking</em></p>
               </td>
             </tr>
             <tr>
@@ -629,7 +630,7 @@
                   <br>
                   <em>Graduate Course Project (<a href="https://rllab.snu.ac.kr/courses/intelligent-systems_2023" target="_blank" rel="noopener noreferrer">Introduction to Intelligent Systems</a>, Spring 2023)</em>
                   <p style="text-align:justify">Developed autonomous driving system for RC Car Racing Challenge using LiDAR-only perception for mapless navigation. Implemented behavior cloning with Gaussian Process Regression to learn driving policy from expert demonstrations. Trained end-to-end control policy mapping raw sensor observations to steering and throttle commands. Achieved top-3 finish in class competition with average lap speed of 2.5 m/s while maintaining safe wall clearance of 15cm.</p>
-                  <p style="color:#666;font-size:12px;margin-top:8px;"><em>Python · PyTorch · LiDAR · Gaussian Process · Behavior Cloning</em></p>
+                  <p style="color:#666;font-size:12px;margin-top:8px;"><em>Python · PyTorch · LiDAR · Behavior Cloning · Gaussian Process Regression · End-to-End Control</em></p>
               </td>
             </tr>
             <tr>
@@ -645,7 +646,7 @@
                   <br>
                   <em>Graduate Course Project (<a href="https://viplab.snu.ac.kr/viplab/courses/mldl1_2023_2/index.html" target="_blank" rel="noopener noreferrer">Deep Learning</a>, Fall 2023) <strong style="color: red;">(Funded by National Research Foundation)</strong></em>
                   <p style="text-align:justify">Led research estimating soil health from satellite imagery for agricultural policy enforcement. Managed $8K grant and directed field surveys across 50+ sites, collecting 100GB of GIS and satellite data. Engineered 30+ novel features from multi-spectral satellite data and GIS sources, training machine learning models (XGBoost, Random Forest) for regression. Achieved 60% improvement over baseline estimates (R² = 0.78) using ensemble methods.</p>
-                  <p style="color:#666;font-size:12px;margin-top:8px;"><em>Python · Scikit-learn · XGBoost · Sentinel-2 · GIS</em></p>
+                  <p style="color:#666;font-size:12px;margin-top:8px;"><em>Python · Scikit-learn · XGBoost · Feature Engineering · Remote Sensing (Sentinel-2) · Geospatial ML</em></p>
 
               </td>
             </tr>
@@ -663,7 +664,7 @@
                   <br>
                   <em>Graduate Course Project (Computer Vision, Fall 2021)</em>
                   <p style="text-align:justify">Developed novel video generation algorithm that synthesizes realistic video sequences from a single input image using sequential structure learning. Integrated optical flow estimation with temporal consistency constraints to eliminate awkward motion artifacts common in frame-by-frame generation approaches.</p>
-                  <p style="color:#666;font-size:12px;margin-top:8px;"><em>PyTorch · Optical Flow · CNNs · Video Synthesis</em></p>
+                  <p style="color:#666;font-size:12px;margin-top:8px;"><em>PyTorch · Image-to-Video Generation · Optical Flow · CNNs · Temporal Consistency</em></p>
               </td>
             </tr> -->
             </tbody>
