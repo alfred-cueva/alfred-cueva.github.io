@@ -346,7 +346,7 @@ span.wine-accent {
 
 @media (max-width: 700px) {
   .timeline-shell {
-    --tl-node: 46px;
+    --tl-node: 56px;
   }
 
   .timeline-shell::before,
@@ -358,14 +358,14 @@ span.wine-accent {
     flex-direction: column;
     overflow-x: visible;
     align-items: stretch;
-    padding: 8px 4px 8px 8px;
+    padding: 24px 4px 8px 8px;
     gap: 30px;
   }
 
   .timeline::before {
     left: calc(var(--tl-node) / 2 + 8px - 1px);
     right: auto;
-    top: 8px;
+    top: 24px;
     bottom: 8px;
     width: 2px;
     height: auto;
@@ -389,6 +389,17 @@ span.wine-accent {
     align-self: start;
   }
 
+  /* Keep padding and border inside the grid column so logos don't cover the dates */
+  .timeline-logo {
+    box-sizing: border-box;
+    padding: 9px;
+  }
+
+  /* Text stays in column 2 even when an item has more lines than the logo spans */
+  .timeline-item > :not(.timeline-logo):not(.timeline-logos) {
+    grid-column: 2;
+  }
+
   .timeline-logos {
     flex-direction: column;
   }
@@ -403,7 +414,7 @@ span.wine-accent {
   }
 
   .timeline-item:first-child::before {
-    top: -2px;
+    top: -16px;
     left: 0;
     transform: none;
   }
@@ -484,4 +495,54 @@ span.wine-accent {
   left: 0;
   max-width: none;
   object-fit: cover;
+}
+
+/* Phone layout: stack the intro and every thumbnail row, and drop justified text,
+   which leaves wide word gaps in narrow columns. !important overrides inline styles. */
+@media (max-width: 700px) {
+  .intro-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .intro-text,
+  .intro-pic {
+    width: auto !important;
+    max-width: none !important;
+    padding: 0 20px !important;
+  }
+
+  .intro-pic {
+    order: -1;
+    padding-top: 32px !important;
+  }
+
+  #profile-circle {
+    width: 180px;
+    margin: 0 auto;
+  }
+
+  .paper-img-td,
+  .paper-img-td + td {
+    display: block;
+    width: auto !important;
+  }
+
+  .paper-img-td {
+    padding: 20px 20px 0;
+  }
+
+  .paper-img-td + td {
+    padding: 12px 20px 20px !important;
+  }
+
+  .paper-img-td > .paper-img,
+  .paper-img-td > .zoom-wrap {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  [style*="text-align:justify"] {
+    text-align: left !important;
+  }
 }

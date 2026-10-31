@@ -4,65 +4,113 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-Alfred Cueva's personal academic website, served as a static site from GitHub Pages
-(`alfred-cueva.github.io`). Forked from Jon Barron's academic website template
-(https://jonbarron.info/). There is **no build step, no package manager, and no test
-suite** — the site is hand-edited HTML/CSS and viewed directly in a browser
-(open `index.html`, or `python3 -m http.server` from the repo root to preview locally).
+Alfred Cueva's personal academic website, a static site served by GitHub Pages from
+`alfred-cueva/alfred-cueva.github.io`. Pushing to `master` deploys. Forked from Jon Barron's
+template (https://jonbarron.info/), which is all `README.md` says.
 
-Deployment is `git push` to the GitHub Pages repo; the live commit history is the
-deploy log. `googlea3babd3d7df5ba87.html` is a Google Search Console verification
-file — do not delete or rename it.
+There is no build step, package manager, linter, or test suite. Preview with
+`python3 -m http.server` from the repo root, then open http://localhost:8000.
+
+`googlea3babd3d7df5ba87.html` is a Google Search Console verification file. Do not delete or
+rename it.
 
 ## Architecture
 
-Everything user-facing lives in **`index.html`** (~580 lines) plus **`stylesheet.css`**.
-The page is a single column built from stacked `<table>` elements (template convention —
-keep using tables for new sections rather than introducing flexbox/grid, to stay
-consistent). Each content section is its own `<table>` introduced by an `<h2>`:
-`Research`, `Current Position`, `Experience`, `Projects`, `Services`. (`Technical Skills`
-exists but is commented out.)
+The whole site is `index.html` (~810 lines) plus `stylesheet.css`.
 
-Entries within a section follow one repeating two-column row pattern:
+### Layout
+
+A single column (max 1000px) of stacked `<table>`s, one or two per section. Visible sections,
+in order: header (bio, contact links, rotating headshot), `Timeline`, `News`, `Research`,
+`Work Experience`, `Projects`, `Services`. `Current Position`, `Technical Skills`, the SNU rows
+of Work Experience, and one project row are commented out.
+
+Use tables for new sections to match the template. The one exception is the Timeline: a
+horizontal flexbox strip (`.timeline-*` classes) inside a table cell that becomes a vertical
+grid below 700px. The first `.timeline-item` gets a "current" badge from CSS `:first-child`,
+so list order decides what is shown as current.
+
+### Entry pattern (Research, Work Experience, Projects)
 
 ```html
 <tr>
-  <td class="paper-img-td">           <!-- left 25%: thumbnail -->
-    <img src="images/foo.gif" class="paper-img">   <!-- or <video class="paper-img"> -->
+  <td class="paper-img-td">                         <!-- left 25%: thumbnail -->
+    <img src="images/foo.gif" alt="..." class="paper-img">
   </td>
-  <td ...>                            <!-- right: text -->
+  <td style="padding:20px;width:75%;vertical-align:middle">
     <span class="papertitle">Title</span>
-    <p style="text-align:justify">Description…</p>
+    <br>
+    <em>Author, <strong>Alfred Cueva</strong>, Author</em>   <!-- * equal contrib, &dagger; -->
+    <br>
+    <a href="..." target="_blank" rel="noopener noreferrer">[arXiv]</a> |
+    <a href="..." target="_blank" rel="noopener noreferrer">[Website]</a>
+    <br>
+    <strong>CoRL 2026<br>RSS 2026 - X Workshop <span class="wine-accent">(Oral)</span></strong>
+    <p style="text-align:justify">Description</p>
+    <p style="color:#666;font-size:12px;margin-top:8px;"><em>Tool · Tool · Tool</em></p>
   </td>
 </tr>
 ```
 
-Key CSS classes (all defined in `stylesheet.css`): `.papertitle`, `.paper-img`,
-`.paper-img-td`, `.company-logo` (Experience-section logos), `.name` (header name),
-`span.highlight` (yellow highlight). Layout/spacing is a mix of these classes and
-heavy inline `style="..."` attributes carried over from the template — match the
-surrounding inline style when editing rather than refactoring it out.
+Work Experience rows use `<img class="company-logo">` on the left and company link, role in
+`.papertitle`, then dates in `<em>` on the right. Every Research, Work Experience, and Projects
+entry ends with the gray `·`-separated tech-tags line.
 
-Media (`images/`, `data/`) is referenced by relative path. Thumbnails are `.png`,
-`.gif`, or autoplaying muted `.mp4`/`<video>`; resumes/theses/reports are PDFs in
-`data/`. Square thumbnails use inline `style="aspect-ratio:1/1;object-fit:cover;"`.
+Thumbnails are `.png`/`.gif` or `<video autoplay loop muted playsinline>`. Recent Research
+thumbnails use `aspect-ratio:664/560;object-fit:cover;`, others `aspect-ratio:1/1`.
 
-The only JavaScript is an inline `<script>` at the bottom of `index.html`: a
-`showFunFact()` function cycling a `funFacts` array into `#fun-fact`.
+### One fact, several places
 
-## Subproject directories (do not treat as part of the personal site)
+Content is duplicated across sections, so a single update usually touches several:
 
-`mipnerf/`, `mipnerf360/`, and `zipnerf/` are **self-contained, unrelated NeRF
-project demo pages** (their own `index.html` + `css/`/`js/`/`img/`). They are not
-linked from the main site and use Bootstrap, not `stylesheet.css`. Leave them alone
-unless a task explicitly targets them.
+- Paper accepted: a `News` line, the venue `<strong>` block of its `Research` entry, and
+  possibly the project links under its `Timeline` item.
+- New role: the bio paragraphs, a `Timeline` item, a `News` line, and a `Work Experience` row.
+
+### JavaScript
+
+One inline `<script>` at the bottom of `index.html`:
+
+- `showFunFact()`: the header button puts a random `funFacts` entry into `#fun-fact`.
+- `zoomLens()`: hover magnifier for `.zoom-wrap` thumbnails. Each needs the same video twice:
+  a `.zoom-base` video and a `.zoom-mag` copy inside `.zoom-lens`. Runs only on fine pointers.
+- `rotateProfilePic()`: cycles `#profile-pic` through `profileImages` every 10s with a fade.
+  Alternate headshots live in `images/alternative_headpics/`.
+
+### Styling
+
+`stylesheet.css` holds the template's base styles plus site additions: `span.wine-accent`
+(crimson emphasis for awards and the "looking for opportunities" line), the `.timeline-*`
+block, `.paper-img*`, `.company-logo`, `#profile-circle`, and `.zoom-*`. The green in the
+Research bullets (inline `#1a9e5c`) matches the timeline's `--tl-accent`. Inline `style="..."`
+is everywhere; match the surrounding inline style rather than refactoring it out.
+
+### Phone layout (max-width 700px)
+
+A media query at the end of `stylesheet.css` stacks the header (`.intro-row`, headshot above
+the bio) and every entry row (thumbnail above text). It also turns justified text left-aligned.
+It relies on markup details, so new content must follow them:
+
+- The left cell of an entry must have `class="paper-img-td"`. The text cell is styled through
+  `.paper-img-td + td`.
+- Write justified text as `style="text-align:justify"` with no space. It is matched by the
+  attribute selector `[style*="text-align:justify"]`.
+- Inline styles on these cells are overridden with `!important`, so their inline widths and
+  padding only apply on desktop.
+
+### Assets
+
+Media lives in `images/`, PDFs (resume, thesis, report) in `data/`, both referenced by relative
+path. GitHub Pages paths are case-sensitive and many files end in `.PNG`, so match the exact
+filename case.
+
+## Unrelated subdirectories
+
+`mipnerf/`, `mipnerf360/`, and `zipnerf/` are self-contained NeRF project pages with their own
+Bootstrap assets. Nothing on the site links to them. Leave them alone unless a task targets them.
 
 ## Editing conventions
 
-- Commit messages are short and imperative, scoped to the file (e.g. "Revise personal
-  bio in index.html"). Match that style.
-- All external links use `target="_blank" rel="noopener noreferrer"`. Preserve this on
-  any new outbound link.
-- Content is frequently toggled via HTML comments (`<!-- ... -->`) rather than deleted —
-  e.g. the Technical Skills table and individual project rows. Prefer commenting out
-  over removing when hiding content, to keep it easy to restore.
+- External links use `target="_blank" rel="noopener noreferrer"`. Keep this on new links.
+- Hide content by commenting it out (`<!-- ... -->`) rather than deleting it, so it is easy to
+  restore.
